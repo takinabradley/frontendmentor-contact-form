@@ -15,7 +15,6 @@ export default function ContactForm({ headingLevel = 1 }) {
   return (
     <div className={styles["ContactForm"]}>
       <form
-        action=""
         style={{ display: "flex", flexDirection: "column" }}
         onSubmit={onSubmit}
       >
@@ -148,8 +147,8 @@ export default function ContactForm({ headingLevel = 1 }) {
         <p>
           Message Sent! Thanks for completing the form. We'll be in touch soon!
         </p>
-        <form method="dialog">
-          <button autoFocus>OK</button>
+        <form >
+          <button autoFocus method="dialog">OK</button>
         </form>
       </dialog>
     </div>

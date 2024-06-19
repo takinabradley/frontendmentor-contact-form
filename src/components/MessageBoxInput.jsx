@@ -29,6 +29,7 @@ export default function MessageBoxInput({
       }
       <_input
         {...inputProps}
+        type={_input === 'textarea' ? undefined : inputProps.type}
         id={inputId}
         aria-describedby={messageBoxId}
         ref={inputRef}
@@ -41,7 +42,7 @@ export default function MessageBoxInput({
       {labelPlacement === "left" ? 
         <label htmlFor={inputId}>{label}</label> : null
       }
-      <p id={messageBoxId} htmlFor={inputId} /* aria-live="off" */ /* aria-atomic="true" aria-relevant="all" */>
+      <p id={messageBoxId} /* aria-live="off" */ /* aria-atomic="true" aria-relevant="all" */>
         {renderValidityMessages()}
       </p>
     </div>
