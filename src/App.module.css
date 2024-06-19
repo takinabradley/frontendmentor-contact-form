@@ -1,0 +1,24 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  background-color: powderblue;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+}
+
+.main > * {
+  background-color: white;
+  padding: 2em;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+}
