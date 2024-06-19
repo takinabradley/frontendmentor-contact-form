@@ -1,5 +1,10 @@
 .ContactForm {
+  color: var(--text-color-primary);
+  font-weight: var(--fw-400);
+}
 
+.ContactForm h1 {
+  color: var(--fw-700);
 }
 
 /* CONTACT INFO SECTION */
