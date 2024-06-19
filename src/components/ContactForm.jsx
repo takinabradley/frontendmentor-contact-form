@@ -148,7 +148,7 @@ export default function ContactForm({ headingLevel = 1 }) {
           Message Sent! Thanks for completing the form. We'll be in touch soon!
         </p>
         <form >
-          <button autoFocus method="dialog">OK</button>
+          <button autoFocus formMethod="dialog">OK</button>
         </form>
       </dialog>
     </div>
