@@ -1,0 +1,214 @@
+.ContactForm {
+
+}
+
+/* CONTACT INFO SECTION */
+.contactInfo {
+  gap: 1em;
+  display: flex;
+  flex-wrap: wrap;
+
+  /* remove fieldSet styles */
+  border: none;
+  padding: 0;
+
+  margin: 1em 0;
+}
+
+.contactInfo .messageBoxInput {
+  flex: 1;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+}
+
+.contactInfo .messageBoxInput > label {
+  display: flex;
+  gap: .5em;
+}
+
+.contactInfo .messageBoxInput:has(input[required]) > label::after {
+  content: "*";
+  display: inline;
+  color: var(--color-primary);
+}
+
+.contactInfo .messageBoxInput > input {
+  border: 1px solid var(--border-color);
+  padding: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+.contactInfo .messageBoxInput > input:focus, .contactInfo .messageBoxInput > input:hover  {
+  outline: 2px solid var(--color-primary);
+}
+
+.contactInfo .messageBoxInput:has(input[type=email]) {
+  flex: 1 0 100%;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactInfo .messageBoxInput > input:user-invalid {
+  border:1px solid var(--color-error);
+}
+
+.contactInfo .messageBoxInput > input:user-invalid:focus, .contactInfo .messageBoxInput > input:user-invalid:hover {
+  outline: 2px solid var(--color-error);
+}
+
+.contactInfo .messageBoxInput > p {
+  color: var(--color-error);
+}
+
+/* QUERY TYPE SECTION */
+.queryType {
+  /* remove fieldset styles */
+  border: none;
+  padding: 1em 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.queryType .queryTypeInputs {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1em;
+}
+
+@media (min-width: 375px) {
+  .queryType .queryTypeInputs {
+    flex-direction: row;
+  }
+}
+
+.queryType label {
+  display: flex;
+  gap: 1em;
+  flex: 1;
+  border: 1px solid var(--color-primary);
+  padding: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.queryType label:hover {
+  outline: 2px solid var(--color-primary);
+}
+
+.queryType label input[type=radio] {
+  accent-color: var(--color-primary);
+  transform: scale(1.5);
+  outline: none;
+}
+
+.queryType label:has(input[type=radio]:checked, input[type=radio]:focus) {
+  background-color: var(--color-secondary);
+  border: 2px solid var(--color-primary);
+}
+
+.queryType legend::after {
+  content: "*";
+  display: inline;
+  padding-left: .5em;
+  color: var(--color-primary);
+}
+
+.queryType p {
+  color: var(--color-error);
+}
+
+/* CHECKBOX */
+.ContactForm form > .messageBoxInput:has(input[type=checkbox]) {
+  padding: 1em 0;
+}
+
+.ContactForm form > .messageBoxInput:has(input[type=checkbox]) label {
+  cursor: pointer;
+  padding-left: 1em;
+}
+
+.ContactForm form > .messageBoxInput:has(input[type=checkbox][required]) label::after {
+  content: "*";
+  display: inline;
+  padding-left: .5em;
+  color: var(--color-primary);
+}
+
+.ContactForm form > .messageBoxInput input[type=checkbox] {
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+
+.ContactForm form > .messageBoxInput:has(input[type=checkbox]) p {
+  color: var(--color-error);
+  padding-top: .5em;
+  display: block;
+}
+
+/* TEXTAREA */
+.ContactForm form > .messageBoxInput:has(textarea) {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+  padding: 1em 0;
+}
+
+.ContactForm form > .messageBoxInput textarea {
+  padding: 1em;
+  border-radius: 10px;
+  border: 1px solid var(--color-primary);
+  /* height: 100px; */
+  font-family: "Karla";
+}
+
+.ContactForm form > .messageBoxInput textarea:focus, .ContactForm form > .messageBoxInput textarea:hover {
+  padding: 1em;
+  border-radius: 10px;
+  outline: 2px solid var(--color-primary);
+  /* height: 100px; */
+}
+
+.ContactForm form > .messageBoxInput textarea:user-invalid {
+  border: 1px solid var(--color-error);
+  /* height: 100px; */
+}
+
+.ContactForm form > .messageBoxInput textarea:user-invalid:focus, .ContactForm form > .messageBoxInput textarea:user-invalid:hover {
+  padding: 1em;
+  border-radius: 10px;
+  outline: 2px solid var(--color-error);
+  /* height: 100px; */
+}
+
+.ContactForm form > .messageBoxInput:has(textarea) p {
+  color: var(--color-error);
+}
+
+.ContactForm form > .messageBoxInput:has(textarea[required]) label::after {
+  content: "*";
+  display: inline;
+  padding-left: .5em;
+  color: var(--color-primary)
+}
+
+.ContactForm form > button {
+  padding: 1em;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 10px;
+  border-style: none;
+}
+
+body {
+  font-family: "Karla";
+  font-size: 1rem;
+}
+
